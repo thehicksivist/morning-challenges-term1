@@ -1,6 +1,7 @@
 # A slightly different kind of challenge this morning.
 
-# The Company has broken the keyboard on their one and only laptop, so can’t get this bit of code to run. What would the output of this code be (without running it on your own computer)? 
+# The Company has broken the keyboard on their one and only laptop, so can’t get this bit of code to run. What would the output of this code 
+# be (without running it on your own computer)? 
 
 #  def fib(num_
 #   if num < 2
@@ -10,3 +11,5 @@
 #   end
 # end
 # puts fib(4)
+
+puts "ans = expected parenthesis line 6 'def fib(num_(HERE)'"
