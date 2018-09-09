@@ -1,8 +1,12 @@
+<<<<<<< HEAD
 # PART 1
+=======
+>>>>>>> a66f15b560d5615b416b1045b016e9e610546faf
 # - create a well named variable that contains the amount of time it took you to get to class
 # - create a complete sentence  that lets us know how you got to class and how long it took
 # - print this complete sentence
 
+<<<<<<< HEAD
 puts "CHALLENGE 02 PART 1"
 
 time_to_class = "1 hour"
@@ -21,6 +25,18 @@ puts
 # if they order a party parrot cocktail, add one to the number of party parrot cocktails you need to make,
 # if they order a party parrot water, add one to the number of party parrot waters you need to make,
 # if they order a party parrot beer, add one to the number of party parrot beers you need to pour
+=======
+# you are working at a bar where you have a current backlog of drinks to make:
+# 3 cocktails
+# 2 waters
+# and
+# 6 beers
+
+# write a program that asks the customer for their order.
+# if they order a cocktail, add one to the number of cocktails you need to make,
+# if they order a water, add one to the number of waters you need to make,
+# if they order a beer, add one to the number of beers you need to pour
+>>>>>>> a66f15b560d5615b416b1045b016e9e610546faf
 
 # print the final drinks order so you know what to make
 
@@ -29,6 +45,7 @@ puts
 # beer sell for $12, and cost $3 to pour
 # water sell for $6, and cost $0.15 to make
 
+<<<<<<< HEAD
 # print out the total profit for the orders you have
 
 puts "CHALLENGE 02 PART 2"
@@ -67,3 +84,6 @@ backlog = { :cocktail => 3, :water => 2, :beer => 6 }
  total_order = (cocktail_order) + (water_order) + (beer_order)
 
  puts "Total order profit is: $#{total_order}"
+=======
+# print out the total profit for the orders you have
+>>>>>>> a66f15b560d5615b416b1045b016e9e610546faf
