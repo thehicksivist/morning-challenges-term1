@@ -74,5 +74,17 @@ more_nested_array.each do |element|
             puts "String includes 'cde'"
 end
 
- =end
-#if aray index is the same, you can take the letter
+# Below is solution to the vowel challenge, could maybe use similar code for above?
+
+# def vowels (string)
+#   vowels = []
+#   count_vowels = string.scan(/[aeiou]/)
+#   vowels << count_vowels
+#   print vowels
+# end
+
+# vowels("a")
+# puts vowels("The quick brown fox")
+# puts vowels("Hello World")
+
+=end

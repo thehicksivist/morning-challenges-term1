@@ -15,5 +15,36 @@
 #
 
 def vowels (string)
-  # Your code here
+  vowels = []
+  count_vowels = string.scan(/[aeiou]/)
+  vowels << count_vowels
+  print vowels
 end
+
+vowels("a")
+puts vowels("The quick brown fox")
+puts vowels("Hello World")
+
+
+
+
+
+
+
+
+# First Solution
+# def vowels (string)
+#   vowels = ["a", "e", "i", "o", "u"]
+#   count_vowels = []
+#   #loop through (vowels) and check if is in (string)
+#   for x in vowels
+#     if string.include? x
+#       count_vowels << x
+#     else
+#     end
+#   end
+#   return count_vowels
+# end
+
+# puts vowels("hi there mate")
+
