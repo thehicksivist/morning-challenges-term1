@@ -68,14 +68,5 @@ backlog = { :cocktail => 3, :water => 2, :beer => 6 }
 
  puts "Total order profit is: $#{total_order}"
  
- def this_method(thing)
-    puts thing.inspect
- end
-
- thing = :thing
- this_method(thing)
-
- #the above will print the symbol ':thing'
- 
  
  
