@@ -41,50 +41,55 @@
 # Extension
 # Use the lots_of_words.txt file to test your code.
 # Now order the words that can be made by length.
+def can_be_made
+    @list = []
+end
 
-arr = [['B','O'], ['X','K'], ['D','Q'], ['C','P'], ['N','A'], ['G','T'], ['R','E'], ['T','G'], ['Q','D'], ['F','S'], ['J','W'],
-['H','U'], ['V','I'], ['A','N'], ['E','R'], ['F','S'], ['L','Y'], ['P','C'], ['Z','M'],]
+can_be_made
 
-def can_make_word("string")
-    letter_used = false
-    arr_used = false
-    arr.each do |letters|
-        letters.each do |letter|
-            if "string".include? "#{letter}"
-                arr.delete(letter)
-                arr.delete(letters)
+def can_make_word(string)
+    arr = [['B','O'], ['X','K'], ['D','Q'], ['C','P'], ['N','A'], ['G','T'], ['R','E'], ['T','G'], ['Q','D'], ['F','S'], ['J','W'],
+          ['H','U'], ['V','I'], ['A','N'], ['E','R'], ['F','S'], ['L','Y'], ['P','C'], ['Z','M']]
+    char_check = []
+    string.chars.each do |char|
+    catch :found do
+        arr.each do |letters|
+                letters.each do |letter|
+                    if char == letter
+                        # TEST print "y"
+                        # TEST puts (letters)
+                        arr.delete(letters) unless letter == "F"
+                        char_check << "y"
+                        throw :found
+                    else
+                        # TEST print "n"
+                    end
+                end
+            end
         end
     end
-
-end
-
-can_make_word("a")
-
-puts "#{string:}"
-
-=begin 
-more_nested_array.each do |element|
-    element.each do |inner_element|
-      inner_element << "test"
+    if char_check.join.length == string.length
+        puts "true"
+        @list.push(string)
+    else
+        puts "false"
     end
-  end
-
-  my_string = "abcdefg"
-        if my_string.include? "cde"
-            puts "String includes 'cde'"
 end
 
-# Below is solution to the vowel challenge, could maybe use similar code for above?
-
-# def vowels (string)
-#   vowels = []
-#   count_vowels = string.scan(/[aeiou]/)
-#   vowels << count_vowels
-#   print vowels
-# end
-
-# vowels("a")
-# puts vowels("The quick brown fox")
-# puts vowels("Hello World")
-
-=end
+can_make_word("A")
+# => true
+can_make_word("BARK")
+# => true
+can_make_word("BOOK")
+# => false
+can_make_word("TREAT")
+# => true
+can_make_word("COMMON")
+# => false
+can_make_word("SQUAD")
+# => true
+can_make_word("CONFUSE")
+# => true
+can_make_word("BOUGHT")
+# => false
+puts "#{@list}"
