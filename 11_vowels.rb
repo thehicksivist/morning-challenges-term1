@@ -15,10 +15,11 @@
 #
 
 def vowels (string)
-  vowels = []
-  count_vowels = string.scan(/[aeiou]/)
-  vowels << count_vowels
-  print vowels
+  # commented stuff is to return the values when the program is run; question asks to have the return value available in the test
+  # vowels = []
+  count_vowels = string.scan(/[aeiou]/i)
+  # vowels << count_vowels
+  # print vowels
 end
 
 vowels("a")

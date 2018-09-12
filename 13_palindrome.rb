@@ -17,4 +17,14 @@
 
 def palindrome (string)
   # Your code here
+  if string == string.reverse
+    puts "true"
+  else
+    puts "false"
+  end
 end
+
+palindrome("hello")
+palindrome("racecar")
+palindrome("hannah")
+palindrome("global")
