@@ -18,3 +18,8 @@
 def in_array (needle, haystack)
   # Your code here
 end
+
+in_array("hello", ["hi", "howdy", "hello"]) 
+# should return true
+in_array("drake", ["jayz", "kanye", "yachty"]) 
+# should return false
