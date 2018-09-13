@@ -17,8 +17,17 @@
 
 def in_array (needle, haystack)
   # Your code here
+  haystack.include?(needle)
 end
 
+# firsst solution
+# if haystack.include? needle
+#   puts "true"
+#   return true
+# else
+#   puts "false"
+#   return false
+# end
 in_array("hello", ["hi", "howdy", "hello"]) 
 # should return true
 in_array("drake", ["jayz", "kanye", "yachty"]) 
