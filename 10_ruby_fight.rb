@@ -13,24 +13,36 @@
 # for a player is 200, and the maximum power value is 25) and call the fight method.
 
 class Player
-        def initialize(name, health, power)
+    attr_accessor :name, :health, :power
+    def initialize(name, health, power)
             @name = name
             @health = health
             @power = power
-        end
-    def is_alive
-        self.health > 0
     end
-    def def_hits
+    def is_alive
+        @health > 0
+        return true
+    end
+    def impact_of_hits(opponent)
+        opponent.health - @power
     end
     def player_info
         player_info = [@name, @health, @power]
+        puts "#{player_info}"
     end
 end
 
-def fight
+
+
+def fight(player1, player2)
+    while player1.is_alive == true && player2.is_alive == true
+        Player.impact_of_hits(player1)
+        Player.impact_of_hits(player2)
+    end
+    puts Player.player_info
 end
 
-player1 = Player.new("johnno", 100, 100)
-player2 - Player.new("janey", 100, 100)
-print "player1 = #{player1.player_info}"
+player1 = Player.new("johnno", rand(100..200), rand(10..25))
+player2 = Player.new("janey", rand(100..200), rand(10..25))
+
+fight(player1, player2)
