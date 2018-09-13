@@ -19,7 +19,31 @@
 # ruby tests/08_in_array_advanced_test.rb
 #
 
-def in_array_advanced (needle, haystack, strict)
-  # Your code here
-  
+def in_array (needle, haystack, strict)
+  if strict == true
+    for x in haystack
+      if x == needle
+        puts "needle found1"
+        return true
+      else
+        puts "needle not found1"
+      end
+      
+    end
+    return false
+  else strict == false
+    for x in haystack
+      if x == needle.downcase
+        puts "needle found2"
+        return true
+      else
+        puts "needle not found2"
+      end
+    end
+    return false
+  end
 end
+
+in_array("HeLLo", ["hi", "howdy", "HeLLo"], true)
+in_array("DrAkE", ["jayz", "kanye", "drake"], false)
+in_array("DrAkE", ["jayz", "kanye", "yachty"], false)
