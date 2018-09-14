@@ -21,10 +21,14 @@ class Player
     end
     def is_alive
         @health > 0
-        return true
     end
-    def impact_of_hits(opponent)
-        opponent.health - @power
+    def attack(target)
+        target.health -= @power
+        puts "attack!"
+    end
+    def defend(target)
+        @health -= target.power
+        puts "defend!"
     end
     def player_info
         player_info = [@name, @health, @power]
@@ -32,14 +36,13 @@ class Player
     end
 end
 
-
-
 def fight(player1, player2)
     while player1.is_alive == true && player2.is_alive == true
-        Player.impact_of_hits(player1)
-        Player.impact_of_hits(player2)
+        player2.attack(player1)
+        player2.defend(player1)
     end
-    puts Player.player_info
+    puts player1.player_info
+    puts player2.player_info
 end
 
 player1 = Player.new("johnno", rand(100..200), rand(10..25))

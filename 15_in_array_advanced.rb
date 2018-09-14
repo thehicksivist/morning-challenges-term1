@@ -19,7 +19,7 @@
 # ruby tests/08_in_array_advanced_test.rb
 #
 
-def in_array (needle, haystack, strict)
+def in_array_advanced (needle, haystack, strict)
   if strict == true
     for x in haystack
       if x == needle
@@ -28,7 +28,6 @@ def in_array (needle, haystack, strict)
       else
         puts "needle not found1"
       end
-      
     end
     return false
   else strict == false
@@ -44,6 +43,6 @@ def in_array (needle, haystack, strict)
   end
 end
 
-in_array("HeLLo", ["hi", "howdy", "HeLLo"], true)
-in_array("DrAkE", ["jayz", "kanye", "drake"], false)
-in_array("DrAkE", ["jayz", "kanye", "yachty"], false)
+in_array_advanced("HeLLo", ["hi", "howdy", "HeLLo"], true)
+in_array_advanced("DrAkE", ["jayz", "kanye", "drake"], false)
+in_array_advanced("DrAkE", ["jayz", "kanye", "yachty"], false)
