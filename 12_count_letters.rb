@@ -16,8 +16,23 @@
 
 def count_letters (string)
   result = {} # You'll need an empty hash to get started!
-  string.chars.each
-  # Your code here
+  string.chars.each do |x|
+    # add each new char to hash as key
+    # count each char
+    if result.key? x
+    puts "x in result"
+    else
+      puts "nah"
+    end
+  end
+      
 
   result # return the hash
 end
+
+# {|a,c| a[c] += 1; a}
+
+count_letters("hello") 
+# should return {"h"=>1, "e"=>1, "l"=>2, o=>1}
+count_letters("abcba") 
+# should return {"a"=>2, "b"=>2, "c"=>1}
