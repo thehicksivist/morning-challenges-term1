@@ -20,7 +20,7 @@ def count_letters (string)
     # add each new char to hash as key
     # count each char
     if result.key? x
-    puts "x in result"
+      puts "x in result"
     else
       puts "nah"
     end
