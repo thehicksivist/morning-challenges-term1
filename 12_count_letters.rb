@@ -15,15 +15,21 @@
 #
 
 def count_letters (string)
-   result = Hash.new 0# You'll need an empty hash to get started!
+   result = {}# You'll need an empty hash to get started!
   string.chars.each do |x|   # add each new char to hash as key
-  result[x] += 1
+  result[x] = result[x] + 1 || 1
   end
-  list = result.keys
-  return list
-  puts "#{result}"
- puts "#{list}"
+  return result
 end
+
+#FIRST SOLUTION: teacher says creating a new hash with an empty value allows you to use '+='
+# def count_letters (string)
+#    result = Hash.new 0# You'll need an empty hash to get started!
+#   string.chars.each do |x|   # add each new char to hash as key
+#   result[x] += 1
+#   end
+#   return result
+# end
 
 count_letters("hello") 
 # should return {"h"=>1, "e"=>1, "l"=>2, o=>1}
