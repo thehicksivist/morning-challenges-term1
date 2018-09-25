@@ -25,7 +25,7 @@ puts chars
 end
 
 pangram = Pangram.new
-pangram.is_pangram?("The quick brown fox jumps over the lazy dog")
+pangram.self.is_pangram?("The quick brown fox jumps over the lazy dog")
 
 # class Pangram
 
