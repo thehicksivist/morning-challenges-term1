@@ -19,6 +19,7 @@
 #
 
 def unique (mylist)
+<<<<<<< HEAD
   arr = [] 
   mylist.each do |x|
     arr << x
@@ -29,6 +30,11 @@ def unique (mylist)
   end
   list = counts.keys
   return list
+=======
+  hash = {}
+  mylist.each { |x| hash[x] = true }
+  hash.keys
+>>>>>>> b028df5d644e116007105a13b9522c8e1282f993
 end
 
 unique([1,2,3,3]) 

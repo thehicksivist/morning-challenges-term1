@@ -16,6 +16,7 @@
 #
 
 def palindrome (string)
+<<<<<<< HEAD
   # Your code here
   if string == string.reverse
     puts "true"
@@ -28,3 +29,7 @@ palindrome("hello")
 palindrome("racecar")
 palindrome("hannah")
 palindrome("global")
+=======
+  string == string.reverse
+end
+>>>>>>> b028df5d644e116007105a13b9522c8e1282f993

@@ -22,6 +22,7 @@
 
 class Dictionary
   def initialize
+<<<<<<< HEAD
     @dictionary = Hash.new 0
   end
   def add_word(word, definition)
@@ -34,6 +35,18 @@ class Dictionary
   def total_words
   #return number of words
   length = @dictionary.length
+=======
+    @words = {}      
+  end
+  def add_word(key, val)
+    @words[key] = val
+  end
+  def total_words
+    @words.length
+  end
+  def lookup(key)
+    @words[key]
+>>>>>>> b028df5d644e116007105a13b9522c8e1282f993
   end
 end
 

@@ -15,6 +15,7 @@
 #
 
 def vowels (string)
+<<<<<<< HEAD
   # commented stuff is to return the values when the program is run; question asks to have the return value available in the test
   # vowels = []
   count_vowels = string.scan(/[aeiou]/i)
@@ -49,3 +50,7 @@ puts vowels("Hello World")
 
 # puts vowels("hi there mate")
 
+=======
+  string.scan(/[aeiou]/i)
+end
+>>>>>>> b028df5d644e116007105a13b9522c8e1282f993
