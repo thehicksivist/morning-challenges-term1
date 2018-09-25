@@ -33,4 +33,21 @@
 def firstNonRepeat (string)
   # Your code here
   # Whiteboard first!
+
+  # retrieve count of letters, send the letters with one to an array and return the first index
+  hash = {}
+array = []
+
+  string.chars.each do |x|
+  hash[x] = hash[x] + 1 || 1
+  end
+  
+
 end
+
+
+
+firstNonRepeat('aaaabbbcccdeeefgh')
+firstNonRepeat('wwwhhhggge')
+firstNonRepeat('awwwhhhggge')
+firstNonRepeat('wwwhhhggg')
