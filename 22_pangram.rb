@@ -26,3 +26,17 @@ end
 
 pangram = Pangram.new
 pangram.is_pangram?("The quick brown fox jumps over the lazy dog")
+
+# class Pangram
+
+#     def self.is_pangram?(str)
+#         # put code here
+#         # list all letters as downcase into new array
+#         # compare the new array with alphabet
+#         for letter in [a..z]
+# puts alphabet
+# puts chars
+# end
+
+# pangram = Pangram.new
+# pangram.is_pangram?("The quick brown fox jumps over the lazy dog")
