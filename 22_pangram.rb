@@ -10,22 +10,23 @@
 
 class Pangram
 
-    def self.is_pangram?(str)
-        # put code here
-        # list all letters as downcase into new array
-        # compare the new array with alphabet
-        alphabet = [a, b, c, d, e, f, g, h, i, j, k, l, m, n, o, p, q, r, s, t, u, v, w, x, y, z]
-        chars = []
+    def is_pangram?(str)
+        @split = str.split("").each { |i| yield i }
+        @alphabet = ['a'..'z']
+        @letters = []
 
-    str.chars.each do |x|   
+    str.chars.each do |x| 
     chars[x.downcase]
     end
-puts alphabet
-puts chars
+end
+puts "#{@alphabet}"
+puts "#{@letters}"
+puts "#{@split}"
+
 end
 
 pangram = Pangram.new
-pangram.self.is_pangram?("The quick brown fox jumps over the lazy dog")
+pangram.is_pangram?("The quick brown fox jumps over the lazy dog")
 
 # class Pangram
 
