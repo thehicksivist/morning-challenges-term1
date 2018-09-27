@@ -23,6 +23,51 @@
 # highScoreTable.scores == []
 # # And so on...
 
+# FIRST SOLUTION
 class HighScoreTable
   # your code here
+  def initialize
+        @scores = []
+  end
+
+  def scores
+    puts "#{@scores}"
+  end
+
+  def update(score)
+      m = @scores.index(@scores.min)
+    if @scores.length < 3
+      @scores << score
+      @scores.sort! {|x, y| y <=> x}
+      return
+    end
+    if @scores.length <= 3 && score > @scores.min
+      @scores[@scores.index(@scores.min)] = score
+      @scores.sort! {|x, y| y <=> x}
+    end
+  end
+
+  def reset()
+    @scores = []
+  end
 end
+
+highScoreTable = HighScoreTable.new
+puts highScoreTable.scores
+# [] # evaluates to True
+highScoreTable.update(10)
+puts highScoreTable.scores
+# [10]
+highScoreTable.update(8)
+puts highScoreTable.scores
+highScoreTable.update(12)
+puts highScoreTable.scores
+highScoreTable.update(5)
+highScoreTable.update(10)
+puts highScoreTable.scores
+# [12, 10, 10]
+highScoreTable.update(15)
+puts highScoreTable.scores
+highScoreTable.reset()
+puts highScoreTable.scores 
+# [] # evaluates to True

@@ -31,28 +31,29 @@
 #
 
 def firstNonRepeat (string)
-<<<<<<< HEAD
-  # Your code here
-  # Whiteboard first!
+  # array to store all characters with
+  no_repeats = []
 
-  # retrieve count of letters, send the letters with one to an array and return the first index
-  hash = {}
-array = []
+  result = Hash.new 0
 
-  string.chars.each do |x|
-  hash[x] = hash[x] + 1 || 1
+  string.chars.each do |x|   
+  result[x] += 1
+  end
+
+  if result.key(1) 
+    return result.key(1)
+    # first solution below
+    # no_repeats << result.key(1)
+    # return no_repeats[0]
+  end
+
+  if no_repeats.empty?
+    return false
   end
   
-
-=======
-  string.chars.each { |x| return x if string.count(x) == 1 }
-  false
->>>>>>> b028df5d644e116007105a13b9522c8e1282f993
 end
-
-
 
 firstNonRepeat('aaaabbbcccdeeefgh')
 firstNonRepeat('wwwhhhggge')
 firstNonRepeat('awwwhhhggge')
-firstNonRepeat('wwwhhhggg')
+firstNonRepeat('wwwhhhggg') #THIS NEEDS TO RETURN FALSE
