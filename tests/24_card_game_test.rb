@@ -26,10 +26,11 @@ class CardGame < Test::Unit::TestCase
         # Non-face cards should return an integer for the rank
         assert_equal("10 of Clubs", @ten_of_clubs.to_s)
     end
-    def test_comparable
-        # You will need to make the Card class Comparable to make this work
-        # Ref: https://docs.ruby-lang.org/en/2.5.0/Comparable.html
-        assert_operator(@queen_of_spades, :>, @ten_of_clubs)
-    end
+    # OPTIONAL TEST
+    # def test_comparable
+    #     # You will need to make the Card class Comparable to make this work
+    #     # Ref: https://docs.ruby-lang.org/en/2.5.0/Comparable.html
+    #     assert_operator(@queen_of_spades, :>, @ten_of_clubs)
+    # end
 end
 
