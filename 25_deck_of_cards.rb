@@ -20,17 +20,42 @@ require_relative '24_card_game'
 class Deck
   def initialize
     # Create a new array of cards
+    cards = []
   end
   
   def shuffle
     # Shuffle the remaining cards
+
   end
 
   def draw(n=1)
     # Draw (remove) n cards from the deck. Return those cards
+
   end
 
   def count
     # How many cards are left?
   end
 end
+
+
+# class Deck
+#   def initialize
+#     # Create a new array of cards
+#     cards = []
+#   end
+  
+#   def shuffle
+#     # Shuffle the remaining cards
+
+#   end
+
+#   def draw(n=1)
+#     # Draw (remove) n cards from the deck. Return those cards
+    
+#   end
+
+#   def count
+#     # How many cards are left?
+#   end
+# end

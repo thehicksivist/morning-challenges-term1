@@ -1,10 +1,12 @@
 class Card
+
+    attr_reader :suit, :rank 
+
     def initialize(suit, rank)
         # Create a new card
-        @suit = suit.capitalize
+        @suit = suit
         @rank = rank
         @card = "#{@rank} of #{@suit}"
-
     end
     
     def face_card?
@@ -18,20 +20,25 @@ class Card
     
     def to_s
         # Return human readable card
-        when face_card? == true
-        case @rank == 1
-            @rank = "Ace"
-        case @rank == 13
-            @rank = "King"
-        case @rank == 12
-            @rank = "Queen"
-        case @rank == 11
-            @rank = "Jack"
+        case @rank
+        when 1
+            name = "Ace"
+        when 13
+            name = "King"
+        when 12
+            name = "Queen"
+        when 11
+            name = "Jack"
+        else
+            name = @rank.to_s
         end
+        suit = @suit.capitalize
+        return "#{name} of #{suit}"
     end
 end
 
-card = Card.new("Hearts", "Queen")
-# puts "#{card}"
-card = Card.new("Hearts", 10)
-# puts "#{card}"
+# TESTS BELOW
+# card = Card.new("Hearts", "Queen")
+# puts card.to_s
+# card = Card.new("Hearts", 10)
+# puts card.to_s
