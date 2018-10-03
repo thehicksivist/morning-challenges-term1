@@ -56,4 +56,4 @@ end
 firstNonRepeat('aaaabbbcccdeeefgh')
 firstNonRepeat('wwwhhhggge')
 firstNonRepeat('awwwhhhggge')
-firstNonRepeat('wwwhhhggg') #THIS NEEDS TO RETURN FALSE
+firstNonRepeat('wwwhhhggg')

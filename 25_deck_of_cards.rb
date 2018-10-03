@@ -18,9 +18,9 @@
 require_relative '24_card_game'
 
 class Deck
-  def initialize
+  def initialize(card, card)
     # Create a new array of cards
-    cards = []
+    cards = [card, card]
   end
   
   def shuffle

@@ -38,13 +38,17 @@ require 'open-uri'
 # require 'net/http/persistent'
 
 def pageTitle(url)
-  open(url).read.scan(/<title>(.*?)<\/title>/)[0]
+
+result = open(url).read.scan(/<title>(.*?)<\/title>/)[0]
+  result[0]
+
 end
 
 pageTitle("http://google.com")
-pageTitle("http://www.reddit.com")
+# Redirect error, SSL validation error
+# pageTitle("http://www.wikipedia.org")
 
-#THIS SOLUTION DOES NOT WORK ON WINDOWS
+#THIS SOLUTION DOES NOT WORK ON WINDOWS 7
 # def pageTitle(url)
 #   Mechanize.new.get(url).title
 # end
